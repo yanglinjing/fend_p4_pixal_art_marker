@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+      <h1>Lab: Pixel Art Maker</h1>
+  </header>
+
+  <section class="comtainer">
+    <div class="row">
+      <div class="col-md-3">
+
+        <!--用户定义表格尺寸-->
+        <div class="leftBox">
+          <h3>Choose Grid Size</h3>
+          <form id="sizePicker">
+              <div class="leftRow">
+                Grid Height:
+                <input type="number" id="input_height" name="height" min="1" value="1">
+              </div>
+
+              <div class="leftRow">
+                Grid Width :
+                <input type="number" id="input_width" name="width" min="1" value="1">
+              </div>
+
+              <div class="leftRow">
+                <input type="submit">
+              </div>
+          </form>
+        </div>
+
+      <!--调色盘-->
+        <div class="leftBox">
+          <h3>Color Picker</h3>
+
+          <div class="curColor">
+            <div id="curColorBox"></div>
+            <p id="CurColorText"></p>
+          </div>
+
+          <div class="leftRow pickColor">
+            <p>Pick A Color:</p>
+            <input type="color" id="colorPicker">
+          </div>
+
+          <div class="leftRow pickColor">
+            <p>Type Hex Color:</p>
+            <input type="text" id="typeColor" value="#000000">
+          </div>
+
+          <p id="notice"></p>
+
+          <p>Last Used Colors</p>
+          <table id="inkBox" class="noBg">
+            <tr class="noBg">
+              <td id="inkBox1" class="noBg"></td>
+              <td id="inkBox2" class="noBg"></td>
+              <td id="inkBox3" class="noBg"></td>
+              <td id="inkBox4" class="noBg"></td>
+              <td id="inkBox5" class="noBg"></td>
+            </tr>
+          </table>
+
+          <div class="curColor leftRow eraserTool">
+             <input type="checkbox" id="eraser">
+             <label for="eraser" class="eraserFont">Eraser Tool</label>
+          </div>
+
+        </div>
+      </div>
+
+      <!--绘画部分-->
+      <div class="col-md-9">
+          <h2>Design Canvas</h2>
+          <table id="pixel_canvas" ondragstart="return false;" ondrop="return false;"></table><!--防止浏览器的拖拽功能：Disable Drag and Drop on HTML elements-->
+      </div>
+
+    </div>
+  </section>
+
+  <script src="designs.js"></script>
+</body>
+</html>

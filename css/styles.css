@@ -1,0 +1,120 @@
+body {
+    text-align: center;
+    font: #999;
+}
+
+h1 {
+    font-family: Monoton;
+    font-size: 70px;
+    margin: 0.2em;
+}
+
+h2 {
+    margin: 1em 0 0.25em;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 1em 0 0.25em;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+h3:first-of-type {
+    margin-top: 0.5em;
+}
+
+table,
+tr,
+td {
+    border: 1px solid #fff;
+    background-color: #f1f1f1;
+}
+
+table {
+    border-collapse: separate;
+    margin: 0 auto;
+}
+/*原本用的border-collapse: collapse; 但是影响画图时候边框的消除，也影响点击（容易选不中）*/
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+input[type=number] {
+    width: 6em;
+}
+
+#pixel_canvas {
+      cursor:url(../images/pencil.ico), auto;
+}
+
+.leftBox {
+  display: block;
+  border:1px solid #e6e6e6;
+  border-radius:16px;
+  box-shadow: 2px 2px 1px #e2e2e2;
+  width: 90%;
+  margin: 12px auto;
+  padding: 10px;
+  max-width: 400px;
+}
+
+.leftRow {
+  margin: 6px auto;
+}
+
+#input_height,
+#input_width {
+  width: 46px;
+}
+
+.curColor {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  height: 30px;
+}
+
+#curColorBox {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.pickColor {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+
+#typeColor {
+  width: 60px;
+}
+
+#notice {
+  font: 12px red;
+}
+
+.noBg{
+    border: 1px solid #f1f1f1;
+    background: none;
+}
+
+.eraserFont{
+    font-weight: normal;
+}
+
+.eraserFont:hover{
+  text-decoration: underline;
+}
+
+.eraserTool{
+  margin: 16px auto 6px;
+}
